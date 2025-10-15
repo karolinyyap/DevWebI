@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.vermelho {
+    height: 20%;
+    background-color: red;
+}
+
+.branco {
+    height: 20%;
+    background-color: white;
+}
+
+.azul {
+    height: 60%;
+    background-color: blue;
+}

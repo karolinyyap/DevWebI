@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.azul {
+    height: 33.333%;
+    background-color: lightblue;
+}
+
+.branco {
+    height: 33.333%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    height: 90%;
+}

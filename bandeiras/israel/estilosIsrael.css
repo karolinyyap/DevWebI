@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.branco {
+    height: 44.4444%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.azul {
+    height: 22.2222%;
+    background-color: blue;
+}
+
+.branco img{
+    margin-left: 580px;
+    height: 90%;
+}

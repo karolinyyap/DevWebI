@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: red;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+    width: 500%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.brancoQuadrado {
+    width: 25%;
+    height: 120px;
+    background-color: white;
+}
+
+.brancoMeio {
+    height: 500px;
+    width: 15%;
+    background-color: white;
+}
+
+.container div{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin-top: 1.5%;
+}

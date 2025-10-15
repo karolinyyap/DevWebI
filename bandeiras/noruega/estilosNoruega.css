@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: red;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.superior {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+
+.azulP {
+    width: 5%;
+    height: 100%;
+    background-color: blue;
+}
+
+.brancoP {
+    width: 5%;
+    height: 228px;
+    background-color: white;
+}
+
+.azulSobreposto {
+    width: 4%;
+    height: 100px;
+    background-color: blue;
+    margin-left: 24%;
+}
+
+.brancoLinha {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+.azulLinha {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+}
+
+
+.meio div{
+    display: flex;
+    flex-direction: row;
+}
+
+.inferior {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}

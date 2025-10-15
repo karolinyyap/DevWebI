@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+.verde {
+    width: 33.333%;
+    background-color: green;
+}
+
+.laranja {
+    width: 33.333%;
+    background-color: orangered;
+}
+
+.branco {
+    width: 33.333%;
+    background-color: white;
+}

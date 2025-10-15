@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.vermelhoPequeno {
+    width: 22.222%;
+    background-color: red;
+}
+
+.vermelhoGrande {
+    width: 66.666%;
+    background-color: red;
+}
+
+.brancoPequeno {
+    width: 11.111%;
+    background-color: white;
+}
+
+.parteSuperior {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.brancoMeio {
+    display: flex;
+    flex-direction: column;
+    height: 22.222%;
+    background-color: white;
+    margin: 1px solid blue;
+}
+
+.parteInferior {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
