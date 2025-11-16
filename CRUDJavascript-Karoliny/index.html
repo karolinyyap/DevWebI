@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="agenda">
+            <h1>Agenda de Contatos</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="fundo">
+                <form>
+                    <label>Nome:</label>
+                    <input type="text" id="nome" maxlength="50" placeholder="Digite o nome" required>
+
+                    <label>Telefone:</label>
+                    <input type="tel" id="telefone" placeholder="Digite o telefone" required>
+
+                    <label>E-mail:</label>
+                    <input type="email" id="email" maxlength="40" placeholder="Digite o e-mail" required>
+                
+                    <button type="button" id="btinsere" name="btinsere" value="Inserir" onclick="inserir()">Inserir</button>
+                </form>
+                    <table id="tabela">
+                        <thead>
+                            <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                            <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+    let i = 0;
+     const maskOptions = {
+        mask: [
+            { mask: '(00) 0000-0000' },  // fixo
+            { mask: '(00) 00000-0000' }  // celular
+        ]
+    };
+
+        IMask(document.getElementById('telefone'), maskOptions);
+
+    function inserir() {
+        let nome = document.getElementById("nome").value;
+        let telefone = document.getElementById("telefone").value;
+        let email = document.getElementById("email").value;
+
+        if (!nome || !telefone || !email) {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        let tabela = document.querySelector("#tabela tbody");
+
+        let linha = tabela.insertRow();
+
+        linha.insertCell(0).innerText = nome;
+        linha.insertCell(1).innerText = telefone;
+        linha.insertCell(2).innerText = email;
+
+        let acoes = linha.insertCell(3);
+        acoes.innerHTML = `
+            <button onclick="editar(this)">Editar</button>
+            <button onclick="excluir(this)">Excluir</button>
+        `;
+
+        document.getElementById("nome").value = "";
+        document.getElementById("telefone").value = "";
+        document.getElementById("email").value = "";
+    }
+
+    function excluir(botao) {
+        if (confirm("Deseja realmente excluir?")) {
+            botao.parentElement.parentElement.remove();
+        }
+    }
+
+    function editar(botao) {
+        let linha = botao.parentElement.parentElement;
+
+        let nome = linha.cells[0].innerText;
+        let telefone = linha.cells[1].innerText;
+        let email = linha.cells[2].innerText;
+
+        linha.cells[0].innerHTML = `<input value="${nome}">`;
+        linha.cells[1].innerHTML = `<input value="${telefone}">`;
+        linha.cells[2].innerHTML = `<input value="${email}">`;
+
+        linha.cells[3].innerHTML = `
+            <button onclick="salvar(this)">Salvar</button>
+            <button onclick="cancelar(this, '${nome}', '${telefone}', '${email}')">Cancelar</button>
+        `;
+    }
+
+    function salvar(botao) {
+        let linha = botao.parentElement.parentElement;
+
+        let nome = linha.cells[0].children[0].value;
+        let telefone = linha.cells[1].children[0].value;
+        let email = linha.cells[2].children[0].value;
+
+        linha.cells[0].innerText = nome;
+        linha.cells[1].innerText = telefone;
+        linha.cells[2].innerText = email;
+
+        linha.cells[3].innerHTML = `
+            <button onclick="editar(this)">Editar</button>
+            <button onclick="excluir(this)">Excluir</button>
+        `;
+    }
+
+    function cancelar(botao, nome, telefone, email) {
+        let linha = botao.parentElement.parentElement;
+
+        linha.cells[0].innerText = nome;
+        linha.cells[1].innerText = telefone;
+        linha.cells[2].innerText = email;
+
+        linha.cells[3].innerHTML = `
+            <button onclick="editar(this)">Editar</button>
+            <button onclick="excluir(this)">Excluir</button>`;
+    }
+
+
+    </script>
+</body>
+</html>

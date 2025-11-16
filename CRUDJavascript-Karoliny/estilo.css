@@ -1,0 +1,121 @@
+* {
+    margin: 3px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #030e4f;
+}
+
+.agenda {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.agenda h1{
+    font-family: 'Georgia';
+    color: #f49f1c;
+}
+
+.container{
+    width: 100%;
+    min-height: 75vh; 
+    display: flex;
+    justify-content: center;
+}
+
+.fundo {
+    width: 900px;          
+    min-height: 300px;    
+    padding: 20px;
+    background-color: #16246b;
+    border-radius: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;               
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+label {
+    margin-top: 20px;
+}
+
+input {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#btinsere {
+    background-color: #f49f1c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 20%;
+    margin-left: 40%;
+}
+
+button {
+    background-color: #f49f1c;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+td button {
+    background-color: #f49f1c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+
+td button:hover,
+button:hover {
+    background-color: #f5b24f;
+}
+
+table {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #030e4f;
+    color: white;
+}
+
+td {
+    background-color: #0e1a5a; 
+    color: #f7d794;         
+    border-bottom: 1px solid #09113a; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
